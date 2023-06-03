@@ -21,6 +21,8 @@
   <!-- Custom Stylesheet -->
   <link rel="stylesheet" href="./css/styles.css" />
 
+  <!-- <link rel="stylesheet" href="./css/borders-styles.css" /> -->
+
   <title>NuCamp: A Better Way To Camp</title>
 </head>
 
@@ -37,11 +39,74 @@
           <h2>a better way to camp</h2>
         </div>
         <div class="col-md-4 col-xl-2 mt-4">
-          <a class="btn btn-info btn-lg text-nowrap" href="#reserveForm" role="button" data-toggle="tooltip" data-placement="bottom" data-html="true" title="Or call us at <br /><strong>1-206-555-1234</strong>">Reserve Campsite</a>
+          <a class="btn btn-info btn-lg text-nowrap" role="button" data-toggle="modal" data-target="#reserveModal">Reserve Campsite</a>
         </div>
       </div>
     </div>
   </header>
+
+  <!--Reserve Modal (Week 3 Assignement)-->
+  <div id="reserveModal" class="modal fade" role="dialog">
+    <div class="modal-dialog modal-lg" role="document">
+      <div class="modal-content">
+        <div class="modal-header bg-info text-white">
+          <h3 class="modal-title">Reserve A Campsite</h3>
+          <button type="button" class="close" data-dismiss="modal">&times;</button>
+        </div>
+        <div class="modal-body">
+          <div class="container-fluid">
+            <form>
+
+              <!--Number of Campers Selection-->
+              <div class="row form-group">
+                <label class="col-sm-6 col-form-label" for="numCampers">Number of Campers</label>
+                <div class="col">
+                  <select class="form-control" name="numCampers" id="numCampers">
+                    <option>Select...</option>
+                    <option value="1">1</option>
+                    <option value="2">2</option>
+                    <option value="3">3</option>
+                    <option value="4">4</option>
+                    <option value="5">5</option>
+                    <option value="6">6</option>
+                  </select>
+                </div>
+              </div>
+
+              <!--Date Selection-->
+              <div class="row form-group">
+                <label class="col-sm-6 col-form-label" for="date">Date</label>
+                <div class="col">
+                  <input class="form-control" type="date" id="date" name="date" placeholder="Date">
+                </div>
+              </div>
+
+              <!--Campsite Type Selection-->
+              <div class="row form-group">
+                <label class="col-sm-6 col-form-label">Campsite Type</label>
+                <div class="col-2 btn-group btn-group-toggle" data-toggle="buttons">
+                  <label class="btn btn-success active">
+                    <input type="radio" name="siteType" id="siteTent" value="tent"> Tent
+                  </label>
+                  <label class="btn btn-primary">
+                    <input type="radio" name="siteType" id="siteRV" value="RV"> RV
+                  </label>
+                </div>
+              </div>
+
+              <!--Cancel and Search Buttons-->
+              <div class="row form-group">
+                <div class="col">
+                  <button type="button" class="btn btn-secondary" data-dismiss="modal">Cancel</button>
+                  <button class="btn btn-primary" type="submit">Search</button>
+                </div>
+              </div>
+            </form>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
 
   <!--Navigation Bar-->
   <nav class="navbar navbar-expand-sm navbar-dark sticky-top">
@@ -99,8 +164,8 @@
                 </div>
                 <div class="col">
                   <div class="form-check">
-                    <input class="form-check-input" type="checkbox" />
-                    <label class="form-check-label">Remember me</label>
+                    <input class="form-check-input" type="checkbox" id="rememberMe" title="Save your information for next time" />
+                    <label class="form-check-label" for="rememberMe">Remember me</label>
                   </div>
                 </div>
               </div>
@@ -209,7 +274,7 @@
     </div>
 
     <!--Reserve Campsite Form (Week 2 Assignment)-->
-    <div class="row row-content">
+    <!-- <div class="row row-content">
       <div class="col-sm-6 mx-auto">
         <div class="card">
           <h3 class="card-header bg-info text-white">Reserve A Campsite</h3>
@@ -247,7 +312,7 @@
         </div>
       </div>
     </div>
-  </div>
+  </div> -->
 
   <!--Footer Section-->
   <footer class="site-footer">
@@ -289,7 +354,7 @@
   <script src="node_modules/bootstrap/dist/js/bootstrap.min.js"></script>
 
   <!--jQuery To Activate Tooltips-->
-  <script>$(function () {$('[data-toggle="tooltip"]').tooltip()})</script>
+  <!-- <script>$(function () {$('[data-toggle="tooltip"]').tooltip()})</script> -->
 </body>
 
 </html>
