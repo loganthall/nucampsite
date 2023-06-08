@@ -1,3 +1,4 @@
 node_modules
 .hintrc
 css/borders-styles.css
+dist
