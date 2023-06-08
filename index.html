@@ -341,7 +341,7 @@
           <a class="btn btn-social-icon btn-google" href="http://youtube.com/" title="YouTube"><i
               class="fa fa-youtube"></i></a>
         </div>
-        <div class="col-sm4 text-center">
+        <div class="col-sm-4 text-center">
           <a role="button" class="btn btn-link" href="tel:+12065551234"><i class="fa fa-phone"></i>
             1-206-555-1234</a><br />
           <a role="button" class="btn btn-link" href="mailto:campsites@nucamp.co"><i class="fa fa-envelope-o"></i>
@@ -355,27 +355,10 @@
   <script src="node_modules/jquery/dist/jquery.slim.min.js"></script>
   <script src="node_modules/popper.js/dist/umd/popper.min.js"></script>
   <script src="node_modules/bootstrap/dist/js/bootstrap.min.js"></script>
+  <script src="js/scripts.js"></script>
 
   <!--jQuery To Activate Tooltips-->
   <!-- <script>$(function () {$('[data-toggle="tooltip"]').tooltip()})</script> -->
-
-  <!--jQuery To Activate Carousel Play/Pause-->
-  <script>
-    $(function() {
-      $(".carousel").carousel( { interval: 2000, pause: "false" } );
-      $("#carouselButton").click(function(){
-        if ($("#carouselButton").children("i").hasClass("fa-pause")) {
-          $(".carousel").carousel("pause");
-          $("#carouselButton").children("i").removeClass("fa-pause");
-          $("#carouselButton").children("i").addClass("fa-play");
-        } else {
-          $(".carousel").carousel("cycle");
-          $("#carouselButton").children("i").removeClass("fa-play");
-          $("#carouselButton").children("i").addClass("fa-pause");
-        }
-      });
-    });
-  </script>
 </body>
 
 </html>
