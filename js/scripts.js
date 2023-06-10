@@ -1,6 +1,9 @@
-$(function() {
-    $(".carousel").carousel( { interval: 2000, pause: "false" } );
-    $("#carouselButton").click(function(){
+//Activates Document Ready
+$(function () {
+
+    //Photo Carousel Play/Pause Toggle
+    $(".carousel").carousel({ interval: 2000, pause: "false" });
+    $("#carouselButton").on("click", function () {
         if ($("#carouselButton").children("i").hasClass("fa-pause")) {
             $(".carousel").carousel("pause");
             $("#carouselButton").children("i").removeClass("fa-pause");
@@ -11,4 +14,15 @@ $(function() {
             $("#carouselButton").children("i").addClass("fa-pause");
         }
     });
-});
+
+    //Reserve Button Modal Activate
+    $("#reserveButton").on("click", function () {
+        $("#reserveModal").modal();
+    });
+
+    //Login Modal Activate
+    $("#loginButton").on("click", function () {
+        $("#loginModal").modal();
+    });
+
+}); //Ends Document Ready
